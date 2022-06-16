@@ -88,7 +88,7 @@ public class Res extends RESTService {
    *
    * 
    * @param id  a String
-   * @param   a JSONObject
+   * @param body  a JSONObject
 
    * 
    * @return Response 
@@ -103,8 +103,8 @@ public class Res extends RESTService {
        @ApiResponse(code = HttpURLConnection.HTTP_NOT_FOUND, message = "notfound")
   })
   @ApiOperation(value = "method1", notes = " ")
-  public Response method1(@PathParam("id") String id, String ) {
-    JSONObject _JSON = (JSONObject) JSONValue.parse();
+  public Response method1(@PathParam("id") String id, String body) {
+    JSONObject body_JSON = (JSONObject) JSONValue.parse(body);
 
 
 
